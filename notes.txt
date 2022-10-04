@@ -1,0 +1,56 @@
+"code ." Opening Visual Code Studio from CMD 
+
+"cd" to change folder in CMD Prompt
+
+# git configuration
+
+"git init" used only once during a project
+
+"git status"
+
+"git remote add origin 'paste url here'" origin can be named anything
+
+"https://github.com/dmeas07/coffee_storefront.git"
+
+"git add ." 
+
+"."mean add everything
+
+"git config user.name "Daravy Meas"
+
+"git config user.email "dmeas07@gmail.com"
+
+"git commit -m "initial commit"
+
+"git push -u origin master"
+---------------------------------------------------------------------------------
+# run project
+npm start
+
+# to change location
+cd <drag folder here>
+
+# git configuration
+
+# initialized a repo/project
+git init 
+
+
+# add a remote url (server)
+git remote add origin  <URL>
+
+# add the files that should be copied (all)
+git add .
+
+
+# create local copy
+git commit -m "ANY MESSAGE"
+
+
+# push to server
+# first time
+git push -u origin master/main
+
+# future times
+git push
+
