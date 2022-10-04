@@ -1,0 +1,16 @@
+.quantitySelector h1{
+    color: black;
+}
+
+.quantitySelector button{
+    width: 50px;
+    padding: 3px 7px;
+    border-radius: 3rem;
+}
+
+.quantitySelector label {
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
