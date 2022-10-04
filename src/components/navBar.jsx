@@ -5,7 +5,7 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="/#">
-          Navbar
+          Coffee
         </a>
         <button
           className="navbar-toggler"
@@ -70,7 +70,7 @@ function NavBar() {
               aria-label="Search"
             />
             <button className="searchBtn" type="submit">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </form>
         </div>
