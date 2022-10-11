@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./quantity.css";
 
-const Quantity = () => {
+const Quantity = (props) => {
   const [qty, setQuantity] = useState(1);
 
   const plusOne = () => {
     // console.log("btn clicked plus one");
     let value = qty + 1;
     setQuantity(value);
+    props.onChange(value);
   };
 
   const minusOne = () => {
@@ -15,6 +16,7 @@ const Quantity = () => {
     if (qty !== 1) {
       let value = qty - 1;
       setQuantity(value);
+      props.onChange(value);
     }
   };
 
