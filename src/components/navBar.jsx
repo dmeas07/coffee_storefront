@@ -1,8 +1,12 @@
 import "./navBar.css";
-
 import { Link } from "react-router-dom";
+import StoreContext from "../state/storeContext";
+import { useContext } from "react";
 
 function NavBar() {
+  const user = useContext(StoreContext).user;
+  const cart = useContext(StoreContext).cart;
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -49,13 +53,11 @@ function NavBar() {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit"></button>
+            <Link className="btn btn-outline-light" to="/cart">
+              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+              <span className="badge text-bg-danger">{cart.length}</span>
+            </Link>
+            <label>{user.name}</label>
           </form>
         </div>
       </div>
