@@ -1,0 +1,16 @@
+
+
+.home{
+    position: relative;
+}
+
+.text h1{
+    position: absolute;
+    right: 50%;
+    top: 34%;
+}
+
+.home img{
+    width: 100%;
+    /* transform: scaleY(-1); */
+}

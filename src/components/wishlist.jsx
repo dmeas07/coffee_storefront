@@ -11,25 +11,26 @@ const WishList = () => {
   };
 
   const addList = () => {
-    let copy = [...list];
+    var copy = list;
     copy.push(text);
-    setText("");
     setList(copy);
   };
 
   return (
     <div className="wishlist">
       <h5>My Wishlist</h5>
-      <div>
-        <input type="text" onChange={handleTextChange} value={text} />
+      <div className="form">
+        <input onChange={handleTextChange} type="text" />
         <button onClick={addList}>Add</button>
       </div>
 
-      <ul>
-        {list.map((t) => (
-          <li>{t}</li>
-        ))}
-      </ul>
+      <div className="all">
+        <ul>
+          {list.map((text) => (
+            <li key={text}>{text}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
