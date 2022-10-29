@@ -7,6 +7,14 @@ function NavBar() {
   const user = useContext(StoreContext).user;
   const cart = useContext(StoreContext).cart;
 
+  const getCount = () => {
+    let count = 0;
+    for (let i = 0; i < cart.length; i++) {
+      count += cart[i].quantity;
+    }
+    return count;
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -55,9 +63,9 @@ function NavBar() {
           <form className="d-flex" role="search">
             <Link className="btn btn-outline-light" to="/cart">
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-              <span className="badge text-bg-danger">{cart.length}</span>
+              <span className="badge text-bg-danger">{getCount()}</span>
             </Link>
-            <label>{user.name}</label>
+            <label id="userName">{user.name}</label>
           </form>
         </div>
       </div>

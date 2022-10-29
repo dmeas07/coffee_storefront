@@ -8,9 +8,24 @@ const GlobalContext = (props) => {
   const addToCart = (prod) => {
     setCart([...cart, prod]);
     console.log("Adding to cart");
+
+    let found = false;
+    let cartCopy = [...cart];
+    for (let i = 0; i < cartCopy.length; i++) {
+      let item = cartCopy[i];
+      if (item._id === prod._id) {
+        item.quantity += prod.quantity;
+        found = true;
+      }
+    }
+    if (!found) {
+      cartCopy.push(prod);
+    }
+    setCart(cartCopy);
   };
 
-  const removeFromCart = () => {
+  const removeFromCart = (prodId) => {
+    setCart([cart.filter((p) => p._id !== prodId)]);
     console.log("removing from cart");
   };
 

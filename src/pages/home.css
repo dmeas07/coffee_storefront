@@ -6,11 +6,13 @@
 
 .text h1{
     position: absolute;
-    right: 50%;
-    top: 34%;
+    right: 40%;
+    top: 50%;
+    
+    
 }
 
 .home img{
     width: 100%;
-    /* transform: scaleY(-1); */
 }
+
