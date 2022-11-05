@@ -8,10 +8,14 @@ function Catalog() {
   // use effect
   // to do something when the component is loaded
   useEffect(() => {
+    loadData();
+  }, {});
+
+  const loadData = async () => {
     let service = new Dataservice();
-    let result = service.getCatalog();
+    let result = await service.getCatalog();
     setProducts(result);
-  }, []);
+  };
 
   return (
     <div className="words">
